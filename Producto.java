@@ -1,4 +1,4 @@
-package shoponline;
+package com.mycompany.shoponline;
 
 public abstract class Producto {
  protected String desc;

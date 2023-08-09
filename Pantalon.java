@@ -1,5 +1,5 @@
 
-package shoponline;
+package com.mycompany.shoponline;
         
 public class Pantalon extends Producto {
     private int talle;
@@ -38,15 +38,15 @@ public class Pantalon extends Producto {
     
     public double getPrecio(){
         int porcentaje = 0;
-        if(modelo=="Oxford"){
+        if("Oxford".equals(modelo)){
             porcentaje = 15;
             precio += precio*porcentaje/100;
         }
-        if(modelo=="Skinny"){
+        if("Skinny".equals(modelo)){
             porcentaje = 25;
             precio += precio*porcentaje/100;
         }
-        if(modelo=="Recto"){
+        if("Recto".equals(modelo)){
             porcentaje = 15;
             precio -= precio*porcentaje/100;
         }

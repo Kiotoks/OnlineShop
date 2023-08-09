@@ -1,5 +1,5 @@
 
-package shoponline;
+package com.mycompany.shoponline;
 
 public class Cliente {
        private int dni;

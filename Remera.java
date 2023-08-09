@@ -1,5 +1,5 @@
 
-package shoponline;
+package com.mycompany.shoponline;
 
 public class Remera extends Producto {
     private char talle;
@@ -19,7 +19,7 @@ public class Remera extends Producto {
         this.talle = talle;
     }
     public String toString() {
-        return "Remera{" + "talle=" + talle + '}';
+        return desc + "........$ " + precio + "(talle:"+ talle +")" ;
     }
     
     public double getPrecio(){

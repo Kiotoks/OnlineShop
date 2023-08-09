@@ -1,5 +1,5 @@
 
-package shoponline;
+package com.mycompany.shoponline;
 
 public class Accesorio extends Producto {
     private double peso;
@@ -39,13 +39,13 @@ public class Accesorio extends Producto {
 
     
     public double getPrecio(){
-        if(metal=="oro"){
+        if("oro".equals(metal)){
             precio = precioOro*peso;
         }
-        if(metal=="plata"){
+        if("plata".equals(metal)){
             precio = precioPlata*peso;
         }
-        if(metal=="acero"){
+        if("acero".equals(metal)){
             precio = precioAcero*peso;
         }
         return precio;
