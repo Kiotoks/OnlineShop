@@ -24,8 +24,8 @@ public class Venta {
        
         this.fecha = fecha;
         this.cliente = c;
-        this.nroFact = this.cantVentas + 1;
-        this.cantVentas = this.nroFact;
+        this.nroFact = Venta.cantVentas + 1;
+        Venta.cantVentas = this.nroFact;
     }
 
     public Cliente getCliente() {
@@ -50,8 +50,8 @@ public class Venta {
     public void ImprimirFactura(){
         calcularImporteFinal();
         DateTimeFormatter isoFecha = DateTimeFormatter.ISO_LOCAL_DATE;
-        System.out.println("Factura N°: "+ nroFact+ " - " + fecha.format(isoFecha));
-        for(Producto p : listaProd){
+        System.out.println("Factura N°: "+ this.nroFact+ " - " + this.fecha.format(isoFecha));
+        for(Producto p : this.listaProd){
             System.out.println(p.toString());
         }
         System.out.println("Total a pagar:..........$ "+ calcularImporteFinal());

@@ -33,7 +33,7 @@ public class Pantalon extends Producto {
 
     @Override
     public String toString() {
-        return "Pantalon{" + "talle=" + talle + '}';
+        return desc + "........$ " + precio + "(talle:"+ talle +")" ;
     }
     
     public double getPrecio(){

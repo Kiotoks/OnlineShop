@@ -16,7 +16,7 @@ public class Cliente {
         this.codigo = codigo;
     }
     public String mostrarCliente(){
-        return("DNI" + dni + "Nombre" + nombre + "Direccion" + direccion + "telefono" + telefono + "Codigo" + codigo);
+        return("DNI:" + dni + " Nombre:" + nombre + " Direccion:" + direccion + " Telefono:" + telefono + " Codigo:" + codigo);
     }
 
     public int getDni() {

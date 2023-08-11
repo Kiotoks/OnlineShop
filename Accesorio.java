@@ -34,7 +34,7 @@ public class Accesorio extends Producto {
     }
 
     public String toString() {
-        return "Accesorio{" + "peso=" + peso + ", metal=" + metal + '}';
+        return desc + "........$ " + precio + "(metal:"+ metal+" " + peso+"g)" ;
     }
 
     
