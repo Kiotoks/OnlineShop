@@ -25,7 +25,7 @@ public class Venta {
         this.fecha = fecha;
         this.cliente = c;
         this.nroFact = Venta.cantVentas + 1;
-        Venta.cantVentas = this.nroFact;
+        Venta.cantVentas = this.nroFact;// CHEQUEAR SI ES NECESARIO
     }
 
     public Cliente getCliente() {
@@ -37,7 +37,7 @@ public class Venta {
     }
     
     public void agregarProducto(Producto p){
-        listaProd.add(p);
+        listaProd.add(p); // AGREGO UN PRODUCTO A A LISTA DE LA VENTA
     }
     
     public double calcularImporteFinal(){
@@ -52,9 +52,9 @@ public class Venta {
         DateTimeFormatter isoFecha = DateTimeFormatter.ISO_LOCAL_DATE;
         System.out.println("Factura N°: "+ this.nroFact+ " - " + this.fecha.format(isoFecha));
         for(Producto p : this.listaProd){
-            System.out.println(p.toString());
+            System.out.println(p.toString()); // falta documentar
         }
-        System.out.println("Total a pagar:..........$ "+ calcularImporteFinal());
+        System.out.println("Total a pagar:..........$ "+ this.calcularImporteFinal());
         
     }
 }
