@@ -1,10 +1,10 @@
 
 package com.mycompany.shoponline;
-
+// Autor: Bieber
 public class Accesorio extends Producto {
     private double peso;
     private String metal;
-    static double precioOro = 300;
+    static double precioOro = 300; // No hace falta incializar
     static double precioPlata = 200;
     static double precioAcero = 100;
     
@@ -13,7 +13,7 @@ public class Accesorio extends Producto {
       this.peso = peso;
       this.metal = metal;
       this.desc = desc;
-      this.precio = precio; 
+      this.precio = precio; // ¿Qué precio recibis?
    
   }
 
@@ -34,6 +34,7 @@ public class Accesorio extends Producto {
     }
 
     public String toString() {
+        // HAY CÓDIGO REDUNDANTE, volver a pensar
         return desc + "........$ " + precio + "(metal:"+ metal+" " + peso+"g)" ;
     }
 
