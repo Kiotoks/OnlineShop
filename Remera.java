@@ -1,6 +1,6 @@
 
 package com.mycompany.shoponline;
-
+// Josue Bieber
 public class Remera extends Producto {
     private char talle;
     
@@ -19,6 +19,7 @@ public class Remera extends Producto {
         this.talle = talle;
     }
     public String toString() {
+        // idem Pantalón
         return desc + "........$ " + precio + "(talle:"+ talle +")" ;
     }
     
@@ -36,7 +37,8 @@ public class Remera extends Producto {
         if(talle=='X'){
             porcentaje = 20;
         }
-        precio += precio*porcentaje/100;
+        // USAR THIS
+        this.precio += precio*porcentaje/100;
         return precio;
     }
     
