@@ -1,6 +1,6 @@
 
 package com.mycompany.shoponline;
-        
+ // Josue Bieber       
 public class Pantalon extends Producto {
     private int talle;
     private String modelo;
