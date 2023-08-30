@@ -1,7 +1,7 @@
 
 package com.mycompany.shoponline;
 // Autor: Bieber
-public class Accesorio extends Producto {
+public class Accesorio extends Producto implements Importable{
     private double peso;
     private String metal;
     
@@ -29,13 +29,25 @@ public class Accesorio extends Producto {
     public void setMetal(String metal) {
         this.metal = metal;
     }
-
+    @Override
+    public void arancelAduanero(){
+        this.precio += 10*this.precio/100;
+        JOptionPane.showMessageDialog(null, "Arancel Aduanero: " + this.precio);
+    }
+    
+    @Override
+    public void arancelTransporte(){
+        this.precio += 2*this.precio/100;
+        JOptionPane.showMessageDialog(null, "Arancel de Transporte: " + this.precio);
+    }
+    
+    @Override
     public String toString() {
         // HAY CÓDIGO REDUNDANTE, volver a pensar
-        return desc + "........$ " + precio + "(metal:"+ metal+" " + peso+"g)" ;
+        return super.toString() + "(metal:"+ metal+" " + peso+"g)" ;
     }
 
-    
+    @Override    
     public double getPrecio(){
         precio = precio * peso;
         return precio;

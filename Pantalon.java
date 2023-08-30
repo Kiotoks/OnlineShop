@@ -34,7 +34,7 @@ public class Pantalon extends Producto {
     @Override
     public String toString() {
      // código redundante: invocar al método toString() de la clase padre: super.toString()
-        return desc + "........$ " + precio + "(talle:"+ talle +")" ;
+        return super.toString()  + "(talle:"+ talle +")" ;
     }
     
     public double getPrecio(){

@@ -2,9 +2,9 @@
 package com.mycompany.shoponline;
 // Josue Bieber
 public class Remera extends Producto {
-    private char talle;
+    private Talles talle;
     
-  public Remera (char talle, String desc, double precio){
+  public Remera (Talles talle, String desc, double precio){
       super(desc, precio);
       this.talle = talle;
       this.desc = desc;
@@ -15,29 +15,29 @@ public class Remera extends Producto {
     public char getTalle() {
         return talle;
     }
-    public void setTalle(char talle) {
+    public void setTalle(Talles talle) {
         this.talle = talle;
     }
     public String toString() {
         // idem Pantalón
-        return desc + "........$ " + precio + "(talle:"+ talle +")" ;
+        return super.toString() + "(talle:"+ talle +")" ;
     }
     
     public double getPrecio(){
         int porcentaje = 0;
-        if(talle=='S'){
-            porcentaje = 5;
+         switch(talle){
+            case S: this.precio += 5*this.precio/100;
+            break;
+            
+            case M: this.precio += 10*this.precio/100;
+            break;
+            
+            case L: this.precio += 15*this.precio/100;
+            break;
+            
+            case XL: this.precio += 20*this.precio/100;
+            break;
         }
-        if(talle=='M'){
-            porcentaje = 10;
-        }
-        if(talle=='L'){
-            porcentaje = 15;
-        }
-        if(talle=='X'){
-            porcentaje = 20;
-        }
-        // USAR THIS
         this.precio += precio*porcentaje/100;
         return precio;
     }

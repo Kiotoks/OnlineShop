@@ -24,8 +24,8 @@ public class Venta {
        
         this.fecha = fecha;
         this.cliente = c;
-        this.nroFact = Venta.cantVentas + 1;
-        Venta.cantVentas = this.nroFact;// CHEQUEAR SI ES NECESARIO
+        Venta.cantVentas += 1;
+        this.nroFact = cantVentas;// CHEQUEAR SI ES NECESARIO
     }
 
     public Cliente getCliente() {
