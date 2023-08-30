@@ -18,7 +18,7 @@ public class Accesorio extends Producto implements Importable{
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(double peso) 
         this.peso = peso;
     }
 
@@ -49,6 +49,7 @@ public class Accesorio extends Producto implements Importable{
 
     @Override    
     public double getPrecio(){
+        // falta invocar a los métodos de la Interface
         precio = precio * peso;
         return precio;
     }
